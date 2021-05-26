@@ -1,12 +1,11 @@
 import React from 'react';
 import Container from './components/Container/Container';
+import GalleryContainer from './components/GalleryContainer/GalleryContainer';
 
 const App = () => {
   return (
     <Container>
-      <div>
-        <h1>Hello React</h1>
-      </div>
+      <GalleryContainer />
     </Container>
   );
 };
