@@ -1,0 +1,13 @@
+/* .exit {
+  transform: scale(1);
+}
+
+.exitActive {
+  transform: scale(0);
+  transition: transform 2000ms ease-in-out;
+} */
+
+/* .exitActive {
+  transform: scale(0);
+  transition: transform 2000ms ease-in-out;
+} */

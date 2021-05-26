@@ -1,0 +1,8 @@
+.imageBlock {
+  background-color: royalblue;
+  width: 20%;
+}
+
+.deleteBtn ~ figcaption:hover {
+  text-decoration: line-through;
+}

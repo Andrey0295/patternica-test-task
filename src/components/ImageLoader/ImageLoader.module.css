@@ -1,0 +1,27 @@
+.inputEl {
+  display: none;
+}
+
+.btnEl {
+  cursor: pointer;
+
+  width: 10rem;
+  height: 2rem;
+
+  border: 1px solid;
+  border-radius: 1rem;
+
+  font-size: 21px;
+  text-align: center;
+  font-weight: 500;
+
+  background-color: blue;
+  color: white;
+
+  transition: background-color 300ms linear;
+}
+
+.btnEl:hover {
+  background-color: limegreen;
+  color: blue;
+}

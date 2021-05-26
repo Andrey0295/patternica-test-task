@@ -7,6 +7,7 @@ import ImageCard from '../ImageCard/ImageCard';
 class GalleryMain extends Component {
   state = {
     selectedFiles: [],
+    
   };
 
   handleInputChange = e => {
@@ -38,6 +39,7 @@ class GalleryMain extends Component {
 
   deleteImage = name => {
     console.log(name);
+    
     this.setState(prevState => ({
       selectedFiles: prevState.selectedFiles.filter(
         image => image.name !== name,
