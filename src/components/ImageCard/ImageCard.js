@@ -7,11 +7,11 @@ import popTransition from './transitions/pop.module.css';
 
 const ImageCard = ({ allImages, onDelete }) => {
   return (
-    <TransitionGroup>
+    <TransitionGroup className={styles.mainBlock}>
       {allImages.map(({ name, imageURL }) => (
         <CSSTransition key={name} timeout={3000} classNames={popTransition}>
           <figure className={styles.imageBlock}>
-            <img src={imageURL} alt="" width="200px" />
+            <img src={imageURL} className={styles.image} alt="" width="200px" />
             <figcaption className={styles.nameText}>{name}</figcaption>
             <button
               type="button"

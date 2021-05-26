@@ -9,13 +9,15 @@ const ImageLoader = ({ onChange }) => {
   };
 
   return (
-    <div>
-      <input
-        ref={inputEl}
-        className={styles.inputEl}
-        type="file"
-        onChange={onChange}
-      />
+    <>
+      <div>
+        <input
+          ref={inputEl}
+          className={styles.inputEl}
+          type="file"
+          onChange={onChange}
+        />
+      </div>
       <button
         type="button"
         className={styles.btnEl}
@@ -23,7 +25,7 @@ const ImageLoader = ({ onChange }) => {
       >
         Add files
       </button>
-    </div>
+    </>
   );
 };
 

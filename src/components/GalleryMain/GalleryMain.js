@@ -4,10 +4,11 @@ import ImageLoader from '../ImageLoader/ImageLoader';
 
 import ImageCard from '../ImageCard/ImageCard';
 
+import styles from './GalleryMain.module.css';
+
 class GalleryMain extends Component {
   state = {
     selectedFiles: [],
-    
   };
 
   handleInputChange = e => {
@@ -39,7 +40,7 @@ class GalleryMain extends Component {
 
   deleteImage = name => {
     console.log(name);
-    
+
     this.setState(prevState => ({
       selectedFiles: prevState.selectedFiles.filter(
         image => image.name !== name,
@@ -49,7 +50,7 @@ class GalleryMain extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.galleryMainBlock}>
         <ImageLoader onChange={this.handleInputChange} />
 
         <ImageCard

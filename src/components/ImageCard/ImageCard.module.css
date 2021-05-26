@@ -1,8 +1,24 @@
-.imageBlock {
-  background-color: royalblue;
-  width: 20%;
+.mainBlock {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.deleteBtn ~ figcaption:hover {
-  text-decoration: line-through;
+.imageBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 15rem;
+  height: 19rem;
+
+  background-color: lightgray;
+}
+
+.image {
+  margin-bottom: 0.5rem;
+}
+
+.nameText {
+  margin-bottom: 1rem;
 }
