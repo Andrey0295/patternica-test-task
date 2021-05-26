@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImageLoader from '../ImageLoader/ImageLoader';
+import ImageLoader from '../GalleryMain/GalleryMain';
 
 import styles from './GalleryContainer.module.css';
 
