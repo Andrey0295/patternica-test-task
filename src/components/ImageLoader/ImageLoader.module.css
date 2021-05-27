@@ -4,25 +4,36 @@
 
 .btnEl {
   cursor: pointer;
-  margin: 2rem auto;
 
   width: 10rem;
-  height: 2rem;
+  height: auto;
+  margin: 2rem auto;
+  padding: 20px 30px;
 
-  border: 1px solid;
-  border-radius: 1rem;
+  border-radius: 10px;
 
+  font-family: 'Montserrat', sans-serif;
   font-size: 21px;
   text-align: center;
   font-weight: 500;
 
-  background-color: blue;
   color: white;
 
-  transition: background-color 300ms linear;
+  background-image: linear-gradient(
+    to right,
+    #9eefe1 0%,
+    #4830f0 51%,
+    #9eefe1 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 
 .btnEl:hover {
-  background-color: limegreen;
-  color: blue;
+  background-position: right center;
+}
+
+.btnEl:focus {
+  background-position: right center;
 }

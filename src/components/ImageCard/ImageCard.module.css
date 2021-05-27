@@ -4,6 +4,7 @@
 }
 
 .imageBlock {
+  overflow: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,13 +13,39 @@
   width: 15rem;
   height: 19rem;
 
-  background-color: lightgray;
+  background-color: lightblue;
+  box-shadow: 3px 3px 3px #777;
+  border-radius: 10px;
 }
 
 .image {
+  width: 90%;
   margin-bottom: 0.5rem;
+  border: 10px solid #fff;
+  border-bottom: 45px solid #fff;
+  box-shadow: 3px 3px 3px #777;
 }
 
 .nameText {
   margin-bottom: 1rem;
+
+  text-align: center;
+  width: 100%;
+
+  font: 400 18px/1 'Kaushan Script', cursive;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  background: rgb(212, 75, 56);
+  color: white;
+  border-radius: 5px;
+}
+
+.deleteBtn:hover {
+  background: rgb(232, 95, 76);
+}
+
+.deleteBtn:focus {
+  background: rgb(232, 95, 76);
 }

@@ -15,6 +15,7 @@ const ImageLoader = ({ onChange }) => {
           ref={inputEl}
           className={styles.inputEl}
           type="file"
+          accept="image/*"
           onChange={onChange}
         />
       </div>
