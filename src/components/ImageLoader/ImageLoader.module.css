@@ -5,10 +5,11 @@
 .btnEl {
   cursor: pointer;
 
-  width: 10rem;
-  height: auto;
   margin: 2rem auto;
   padding: 20px 30px;
+
+  width: 10rem;
+  height: auto;
 
   border-radius: 10px;
 

@@ -1,21 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ImageCard.module.css';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import popTransition from './transitions/pop.module.css';
-// import textTransition from './transitions/text.module.css';
 
 const ImageCard = ({ allImages, onDelete }) => {
+  const { mainBlock, imageBlock, image, nameText, deleteBtn } = styles;
   return (
-    <TransitionGroup className={styles.mainBlock}>
+    <TransitionGroup className={mainBlock}>
       {allImages.map(({ name, imageURL }) => (
         <CSSTransition key={name} timeout={3000} classNames={popTransition}>
-          <figure className={styles.imageBlock}>
-            <img src={imageURL} className={styles.image} alt="" width="200px" />
-            <figcaption className={styles.nameText}>{name}</figcaption>
+          <figure className={imageBlock}>
+            <img src={imageURL} className={image} alt="" width="200px" />
+            <figcaption className={nameText}>{name}</figcaption>
             <button
               type="button"
-              className={styles.deleteBtn}
+              className={deleteBtn}
               onClick={() => onDelete(name)}
             >
               Delete
@@ -27,16 +28,17 @@ const ImageCard = ({ allImages, onDelete }) => {
   );
 };
 
-export default ImageCard;
+ImageCard.propTypes = {
+  onDelete: PropTypes.func.isRequired,
+  imageURL: PropTypes.string,
+  allImages: PropTypes.array,
+  name: PropTypes.string,
+};
 
-//  <div>
-//    {allImages.map(({ name, imageURL }) => (
-//      <figure key={name} className={styles.imageBlock}>
-//        <img src={imageURL} alt="" width="200px" />
-//        <figcaption>{name}</figcaption>
-//        <button type="button" onClick={() => onDelete(name)}>
-//          Delete
-//        </button>
-//      </figure>
-//    ))}
-//  </div>;
+ImageCard.defaultProps = {
+  allImages: [],
+  name: '',
+  imageURL: '',
+};
+
+export default ImageCard;

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './ImageLoader.module.css';
 
@@ -28,6 +29,10 @@ const ImageLoader = ({ onChange }) => {
       </button>
     </>
   );
+};
+
+ImageLoader.propTypes = {
+  onChange: PropTypes.func.isRequired,
 };
 
 export default ImageLoader;

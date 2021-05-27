@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import ImageLoader from '../ImageLoader/ImageLoader';
-
 import ImageCard from '../ImageCard/ImageCard';
 
 import styles from './GalleryMain.module.css';
@@ -33,44 +32,39 @@ class GalleryMain extends Component {
 
   upLoadImage = file => {
     const reader = new FileReader();
+
     reader.onload = event => {
+      const { result } = event.target;
+      const { selectedFiles } = this.state;
       const imageData = {
-        imageURL: event.target.result,
+        imageURL: result,
         name: file.name,
       };
-      const filter = this.state.selectedFiles.filter(
+      const filter = selectedFiles.filter(
         image => image.name === imageData.name,
       );
       filter.length > 0
         ? alert('This file already in gallery')
-        : this.setState(prevState => ({
-            selectedFiles: [...prevState.selectedFiles, imageData],
+        : this.setState(({ selectedFiles }) => ({
+            selectedFiles: [...selectedFiles, imageData],
           }));
-
-      console.log(imageData);
     };
     reader.readAsDataURL(file);
   };
 
   deleteImage = name => {
-    console.log(name);
-
-    this.setState(prevState => ({
-      selectedFiles: prevState.selectedFiles.filter(
-        image => image.name !== name,
-      ),
+    this.setState(({ selectedFiles }) => ({
+      selectedFiles: selectedFiles.filter(image => image.name !== name),
     }));
   };
 
   render() {
+    const { selectedFiles } = this.state;
     return (
       <div className={styles.galleryMainBlock}>
         <ImageLoader onChange={this.handleInputChange} />
 
-        <ImageCard
-          allImages={this.state.selectedFiles}
-          onDelete={this.deleteImage}
-        />
+        <ImageCard allImages={selectedFiles} onDelete={this.deleteImage} />
       </div>
     );
   }

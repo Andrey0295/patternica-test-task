@@ -29,16 +29,18 @@
 .nameText {
   margin-bottom: 1rem;
 
-  text-align: center;
   width: 100%;
 
+  text-align: center;
   font: 400 18px/1 'Kaushan Script', cursive;
 }
 
 .deleteBtn {
   cursor: pointer;
+
   background: rgb(212, 75, 56);
   color: white;
+
   border-radius: 5px;
 }
 

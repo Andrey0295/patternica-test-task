@@ -5,10 +5,4 @@ import App from './App';
 import 'modern-normalize/modern-normalize.css';
 import './index.css';
 
-ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>,
-  <App />,
-  document.getElementById('root'),
-);
+ReactDOM.render(<App />, document.getElementById('root'));
