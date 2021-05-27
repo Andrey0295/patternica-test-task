@@ -11,6 +11,20 @@ class GalleryMain extends Component {
     selectedFiles: [],
   };
 
+  componentDidMount() {
+    const images = localStorage.getItem('images');
+    const parsedImages = JSON.parse(images);
+
+    if (parsedImages) {
+      this.setState({ selectedFiles: parsedImages });
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { selectedFiles } = this.state;
+    localStorage.setItem('images', JSON.stringify(selectedFiles));
+  }
+
   handleInputChange = e => {
     let file = e.target.files[0];
 
