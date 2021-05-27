@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/patternica-test-task/static/css/main.a7d5d48a.chunk.css",
+    "main.js": "/patternica-test-task/static/js/main.f6472d88.chunk.js",
+    "main.js.map": "/patternica-test-task/static/js/main.f6472d88.chunk.js.map",
+    "runtime-main.js": "/patternica-test-task/static/js/runtime-main.28351b2a.js",
+    "runtime-main.js.map": "/patternica-test-task/static/js/runtime-main.28351b2a.js.map",
+    "static/css/2.bc922b9c.chunk.css": "/patternica-test-task/static/css/2.bc922b9c.chunk.css",
+    "static/js/2.966ca2c6.chunk.js": "/patternica-test-task/static/js/2.966ca2c6.chunk.js",
+    "static/js/2.966ca2c6.chunk.js.map": "/patternica-test-task/static/js/2.966ca2c6.chunk.js.map",
+    "index.html": "/patternica-test-task/index.html",
+    "static/css/2.bc922b9c.chunk.css.map": "/patternica-test-task/static/css/2.bc922b9c.chunk.css.map",
+    "static/css/main.a7d5d48a.chunk.css.map": "/patternica-test-task/static/css/main.a7d5d48a.chunk.css.map",
+    "static/js/2.966ca2c6.chunk.js.LICENSE.txt": "/patternica-test-task/static/js/2.966ca2c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28351b2a.js",
+    "static/css/2.bc922b9c.chunk.css",
+    "static/js/2.966ca2c6.chunk.js",
+    "static/css/main.a7d5d48a.chunk.css",
+    "static/js/main.f6472d88.chunk.js"
+  ]
+}
